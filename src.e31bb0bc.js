@@ -48173,7 +48173,11 @@ function App() {
         color: 'var(--gray)',
         marginBottom: '0.5em'
       }
-    }, "Transfer PIKA Token to"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
+    }, "Transfer PIKA Token to"), /*#__PURE__*/_react.default.createElement("div", {
+      style: {
+        display: 'flex'
+      }
+    }, /*#__PURE__*/_react.default.createElement("input", {
       autoComplete: "off",
       placeholder: "your-friend.testnet",
       defaultValue: "testdev.testnet",
@@ -48183,7 +48187,7 @@ function App() {
         flex: 1,
         margin: 2
       }
-    })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
+    }), /*#__PURE__*/_react.default.createElement("input", {
       autoComplete: "off",
       defaultValue: "10",
       placeholder: "Amount",
@@ -48194,7 +48198,7 @@ function App() {
         flex: 1,
         margin: 2
       }
-    })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+    }), /*#__PURE__*/_react.default.createElement("button", {
       disabled: buttonDisabled,
       style: {
         borderRadius: '5px 5px 5px 5px',
@@ -48247,7 +48251,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45951" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37473" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
