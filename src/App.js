@@ -210,7 +210,8 @@ export default function App() {
                 style={{ flex: 1, margin: 2 }}
               />
               </div>
-              <div>
+              <div style={{ display: 'flex' }}>
+
               <button
                 disabled={buttonDisabled}
                 style={{ borderRadius: '5px 5px 5px 5px', margin: 2 }}
