@@ -44,9 +44,9 @@ export default function App() {
   if (!window.walletConnection.isSignedIn()) {
     return (
       <main>
-        <h1>Welcome to NEARVEMBER Challenge 6!</h1>
+        <h1>Welcome to Pika Pika Wallet AirDrop!</h1>
         <p>
-          Go ahead and click the button below to try it out:
+          Sign in To Get PIKA, Only 1 Billion PIKA TOKEN in the World!
         </p>
         <p style={{ textAlign: 'center', marginTop: '2.5em' }}>
           <button onClick={login}>Sign in</button>
@@ -59,22 +59,14 @@ export default function App() {
     // use React Fragment, <>, to avoid wrapping elements in unnecessary divs
     <>
       <button className="link" style={{ float: 'right' }} onClick={logout}>
-        Sign out
+        {window.accountId} | Sign out
       </button>
       <main>
-        <h1>
-          MEME Token balance of {window.accountId}
-          <br />
-          <label
-            htmlFor="balance"
-            style={{
-              color: 'var(--secondary)',
-              borderBottom: '2px solid var(--secondary)'
-            }}
-          >
-          {balance}
-          </label>
-        </h1>
+        <h2>
+          PIKA Token Wallet 
+         
+        </h2>
+        <img src={"https://www.shareicon.net/data/256x256/2016/08/01/640547_game_512x512.png"}/>
         <form onSubmit={async event => {
           event.preventDefault()
 
@@ -105,12 +97,27 @@ export default function App() {
           }
         }}>
           <fieldset id="buyForm">
+
+          <h3>
+          Balance :  
+          
+          <label
+            htmlFor="balance"
+            style={{
+              color: 'var(--secondary)',
+              
+            }}
+          >
+          {balance} PIKA
+          </label>
+        </h3>
+
             <div style={{ display: 'flex' }}>
               <button
                 disabled={buttonDisabled}
                 style={{ borderRadius: '5px 5px 5px 5px', margin: 2 }}
               >
-                Buy 100 MEME for 1 NEAR
+                Get AirDrop 100 PIKA
               </button>
             </div>
           </fieldset>
@@ -176,17 +183,23 @@ export default function App() {
                 marginBottom: '0.5em'
               }}
             >
-              Transfer MEME Token to
+              Transfer PIKA Token to
             </label>
-            <div style={{ display: 'flex' }}>
+            {/* <div style={{ display: 'flex' }}> */}
+              <div>
+
               <input
                 autoComplete="off"
-                defaultValue="testdev.testnet"
                 placeholder="your-friend.testnet"
+                defaultValue="testdev.testnet"
                 id="toAccount"
                 required={true}
                 style={{ flex: 1, margin: 2 }}
               />
+              </div>
+
+              <div>
+                
               <input
                 autoComplete="off"
                 defaultValue="10"
@@ -196,13 +209,17 @@ export default function App() {
                 required={true}
                 style={{ flex: 1, margin: 2 }}
               />
+              </div>
+              <div>
               <button
                 disabled={buttonDisabled}
                 style={{ borderRadius: '5px 5px 5px 5px', margin: 2 }}
               >
                 Send
               </button>
-            </div>
+              </div>
+
+            {/* </div> */}
           </fieldset>
         </form>
       </main>
